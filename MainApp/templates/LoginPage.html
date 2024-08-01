@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/LoginPageStyles/css/farsi-font.css">
+<link rel="stylesheet" type="text/css" href="/static/LoginPageStyles/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/LoginPageStyles/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/LoginPageStyles/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="/static/LoginPageStyles/css/iofrm-theme12.css">
+</head>
+<body dir="ltr">
+    <div class="form-body" class="container-fluid">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <div class="website-logo-inside">
+                            <a href="">
+                                <div class="logo">
+                                    <img class="logo-size" src="/static/LoginPageStyles/images/logo-light.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="page-links">
+                            <a href="" class="active"> Login </a>
+                        </div>
+                        <form action="{% url 'LoginPage' %}" method="post">
+                            {% csrf_token %}
+
+                            {% if validation_error %}
+                                <p style="color: #ff6666">
+                                    {{ validation_error }}
+                                </p>
+                            {% endif %}
+
+                            {% if hasError %}
+                                <p style="color: #ff6666;">{{ error }}</p>
+                            {% endif %}
+
+                            <input style="text-align: left;" class="form-control" type="text" name="username" placeholder="Username" required>
+                            <input style="text-align: left;" class="form-control" type="password" name="password" placeholder="Password" required>
+                            <div class="form-button">
+                                <button id="submit" type="submit" class="ibtn">Submit</button>
+                            </div>
+                        </form>
+                        <div class="other-links">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="/static/LoginPageStyles/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/LoginPageStyles/js/popper.min.js"></script>
+<script type="text/javascript" src="/static/LoginPageStyles/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/LoginPageStyles/js/main.js"></script>
+</body>
+
+</html>
