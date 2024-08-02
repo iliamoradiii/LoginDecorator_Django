@@ -9,6 +9,7 @@ def Index(request):
     return render(request, "index.html")
 
 class Login(View):
+    @PreventRenderToLoginUser
     def get(self, request):
         return render(request, "LoginPage.html")
 
@@ -16,7 +17,7 @@ class Login(View):
     @UserValidation
     def post(self, request, is_valid, cookie_string, role):
         if is_valid:
-            response = redirect("/admin-panel")
+            response = redirect("/admin-panel" if role == "AdminUser" else "/user-panel")
             response.set_cookie('user-auth', cookie_string, max_age=timedelta(weeks=1))
             return response
         else:
