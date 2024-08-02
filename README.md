@@ -14,7 +14,7 @@ This is a Django project that includes two types of panels: one for users and on
 1. Clone the repository:
 ```sh
 git clone https://github.com/iliamoradiii/LoginDecorator_Django.git
-cd your-repo-name
+cd LoginDecorator_Django
 python -m venv env
 ```
   
