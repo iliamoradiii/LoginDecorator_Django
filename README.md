@@ -10,6 +10,7 @@ This is a Django project that includes two types of panels: one for users and on
 - Organized models for better code readability
 
 ## Project Structure
+my_project/
 ├── LoginDecorator/
 │ ├── init.py
 │ ├── asgi.py
@@ -17,23 +18,20 @@ This is a Django project that includes two types of panels: one for users and on
 │ ├── urls.py
 │ └── wsgi.py
 │
-|
 ├── AdminPanel/
 │ ├── templates/
-|   └── AdminPanel_index.html
-│ ├── wsgi.py
+│ │ └── AdminPanel_index.html
 │ ├── init.py
 │ ├── admin.py
 │ ├── apps.py
 │ ├── urls.py
 │ ├── Validators.py
 │ └── views.py
-|
-|
+│
 ├── MainApp/
 │ ├── templates/
-|   ├── index.html
-|   └── LoginPage.html
+│ │ ├── index.html
+│ │ └── LoginPage.html
 │ ├── init.py
 │ ├── admin.py
 │ ├── apps.py
@@ -41,45 +39,42 @@ This is a Django project that includes two types of panels: one for users and on
 │ ├── urls.py
 │ ├── Validators.py
 │ └── views.py
-|
-|
+│
 ├── Models/
-│ ├── mirations/
-|   └── ...
+│ ├── migrations/
+│ │ └── ...
 │ ├── init.py
 │ ├── admin.py
 │ ├── models.py
 │
-|
 ├── UserPanel/
 │ ├── templates/
-|    └── UserPanel_index.html
+│ │ └── UserPanel_index.html
 │ ├── init.py
 │ ├── admin.py
 │ ├── apps.py
 │ ├── urls.py
 │ └── views.py
-|
-|
+│
 ├── static/
-|  ├── LoginPageStyles/
-|     └── ...
+│ ├── LoginPageStyles/
+│ │ └── ...
+│
 ├── templates/
-|
+│
 ├── db.sqlite3
 ├── manage.py
 └── README.md
 
 
-
 ## Installation
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/iliamoradiii/LoginDecorator_Django.git
-   cd your-repo-name
-   python -m venv env
-  ```
-  ```
+```sh
+git clone https://github.com/iliamoradiii/LoginDecorator_Django.git
+cd your-repo-name
+python -m venv env
+```
+  
 2. Activate the virtual environment:
   On Windows:
   ```sh
