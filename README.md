@@ -10,7 +10,6 @@ This is a Django project that includes two types of panels: one for users and on
 - Organized models for better code readability
 
 ## Project Structure
-»خلهد/
 ├── LoginDecorator/
 │ ├── init.py
 │ ├── asgi.py
@@ -77,9 +76,7 @@ This is a Django project that includes two types of panels: one for users and on
 1. Clone the repository:
    ```sh
    git clone https://github.com/iliamoradiii/LoginDecorator_Django.git
-
    cd your-repo-name
-   
    python -m venv env
   ```
   ```
@@ -87,10 +84,8 @@ This is a Django project that includes two types of panels: one for users and on
   On Windows:
   ```sh
   .\env\Scripts\activate
-
   ```
   On macOS and Linux:
-
   ```sh
   source env/bin/activate
   ```
