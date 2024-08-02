@@ -97,13 +97,13 @@ python -m pip install Django==4.2.14
 ## Usage
 
 1. Create a superuser:
-   ```sh
-   python manage.py createsuperuser
-   ```
+```sh
+python manage.py createsuperuser
+```
 2. Run the development server:
-  ```sh
-  python manage.py runserver
-  ```
+```sh
+python manage.py runserver
+```
 
 
 
